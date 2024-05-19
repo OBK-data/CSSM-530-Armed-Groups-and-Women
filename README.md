@@ -13,7 +13,7 @@ Firstly install dependencies of this library.
 pip install -r https://raw.githubusercontent.com/OBK-data/CSSM-530-Armed-Groups-and-Women/fb96f6a3247c5c694f4dbb6d2fe7268675a49647/requirements.txt
 ```
 
-To replicate this study, the python files should be ran in this order. The file run_analysis.py should run the files in this order; however if you want to run the files separately make sure to follow this order.
+To replicate this study, the python files should be ran in this order. The file **run_analysis.py** should run the files in this order; however if you want to run the files separately make sure to follow this order.
 ### dataset_combiner.py:
 This file combines and cleans the news data of the data collected from NexisUni (Formerly known as LexisNexis) and turns them into csv files
 ### lda_training.py:
