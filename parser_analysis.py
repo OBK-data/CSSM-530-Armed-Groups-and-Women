@@ -1,7 +1,5 @@
 import pandas as pd
 import nltk
-#from wordcloud import WordCloud
-import matplotlib.pyplot as plt
 from nltk.stem import WordNetLemmatizer
 import re
 import string
@@ -68,7 +66,7 @@ def textfrequency(data):
             # Populate the table with DataFrame data
             for _, row in rslt.iterrows():
                 row_cells = table.add_row().cells
-                row_cells[0].text = str(row['Word'])
+                row_cells[0].text = str(row['Word_{}'])
                 row_cells[1].text = str(row['Frequency'])
             print('All frequencies')
             print('='*60)
@@ -85,6 +83,6 @@ def textfrequency(data):
             section.bottom_margin = Inches(0.5)
         # Add a table with header row
 for num in range(len(org_name)):
-    newslet= pd.read_csv("processed_news/{}_parsed2.csv".format(org_name[num]))
+    newslet= pd.read_csv("processed_news/{}_parsed.csv".format(org_name[num]))
     textfrequency(newslet)
 doc.save('table_of_frequency.docx')

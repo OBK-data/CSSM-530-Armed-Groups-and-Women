@@ -52,7 +52,7 @@ def parsemulti(to_parse):
     parse_done=pd.concat(df_list)
     print(parse_done)
     #saves the data as csv
-    parse_done.to_csv("processed_news/{}_parsed2.csv".format(org_name[num]))
+    parse_done.to_csv("processed_news/{}_parsed.csv".format(org_name[num]))
 
 #feeds the data into the pipeline based on organization name
 for num in range(len(org_name)):
