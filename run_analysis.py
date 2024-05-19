@@ -43,7 +43,7 @@ def multi_analysis():
         exec(f.read())
 
     #Results of Dependency Parsing
-    with open('parser_apply_cuda.py', 'r') as f:
+    with open('parser_analysis.py', 'r') as f:
         exec(f.read())
 
 if __name__ == "__main__":
