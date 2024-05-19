@@ -32,4 +32,5 @@ It runs the transformer based pre-trained model [SieBERT](https://huggingface.co
 It applies [Stanza's](https://stanfordnlp.github.io/stanza/usage.html) Dependency Parsing file with CUDA. Make sure to set use_gpu as False if you do not have CUDA installed.
 ### parser_analysis.py:
 It puts out the frequency table of women both as the root of the sentence and as a dependency of other words, and female as a dependency of other words.
-
+### senti_analyze.py (Optional):
+While it is not included in the pipeline, this file was used for testing different models without training them.
