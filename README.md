@@ -2,7 +2,7 @@
 
 This repository contains the data for the "An analysis of depiction of women on news media based on armed group typology" paper written for the 2024 Spring semester course CSSM 530.
 
-##Introduction
+## Introduction
 This project is an exploratory study of how the news depiction of women differ within the context in which armed groups with different ideologies operate. To do so, news about religious (Hamas and Hezbollah) and ethnic (LTTE and IRA) was collected from NexisUni according to the dates these groups have operated. For more details about the study, please check the the paper within this repository.
 
 ## How to replicate this study?
