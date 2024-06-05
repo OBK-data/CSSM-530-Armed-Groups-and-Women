@@ -7,7 +7,7 @@ import os, os.path
 #Lists for organization names and their natures
 org_name=["Hamas","Hezbollah","IRA","LTTE"]
 org_type=["Religious","Religious","Ethnic","Ethnic"]
-rawnews_dir=['raw_news2/' + sub  for sub in org_name]
+rawnews_dir=['raw_news/' + sub  for sub in org_name]
 numb=0
 final_df=pd.DataFrame()
 def remove_punctuation(text):
