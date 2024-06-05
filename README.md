@@ -36,4 +36,4 @@ It puts out the frequency table of women both as the root of the sentence and as
 While it is not included in the pipeline, this file was used for testing different models without training them.
 
 ### senti_bias.py (Optional):
-The initial commit of the files lack the news sources and since the bias in sources is mostly relevant for the sentiment analysis, this python file updates the processed data including topic modelling and sentiment analysis and updates them based on the files that have news sources embedded to them. Use this file to check if news biases affect the sentiment direction.
+The initial commit of the files lack the news sources and since the bias in sources is mostly relevant for the sentiment analysis, this python file updates the processed data including topic modelling and sentiment analysis and updates them based on the files that have news sources embedded to them. Use this file to check if news biases affect the sentiment direction. Also prints the sources for the news.
