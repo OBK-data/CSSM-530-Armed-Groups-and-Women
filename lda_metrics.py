@@ -45,7 +45,7 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
-def lda_diagnose(dataframe,type):
+def lda_diagnose(dataframe,type,metric):
     #data preprocessing
     dataframe.body=dataframe.body.str.lower()
     dataframe['body'] = dataframe.body.apply(lemmatize_text)
@@ -67,7 +67,7 @@ def lda_diagnose(dataframe,type):
         topicmodel_load= "LDAmodels/{} {}.model".format(type,i+5)
         lda_model=LdaModel.load(topicmodel_load)
         #get the coherence model
-        coherence_model_lda = CoherenceModel(model=lda_model, texts=data_words, dictionary=id2word, coherence='u_mass')
+        coherence_model_lda = CoherenceModel(model=lda_model, texts=data_words, dictionary=id2word, coherence=metric)
         coherence_lda = coherence_model_lda.get_coherence()
         print('\nCoherence Score: ', coherence_lda)
         #Print the metrics and top 10 keywords, for both of the measures the values that are closer to 0 are better
@@ -98,9 +98,13 @@ def lda_diagnose(dataframe,type):
     plt.title('Evaluation Graph {}'.format(type))
     fig.tight_layout()
 
-    plt.savefig("Visuals\LDA Graph {}".format(type))
+    plt.savefig("Visuals\LDA Graph {} {}".format(type,metric))
     plt.show()
-
-#Apply the commands
-lda_diagnose(ethnic,"Ethnic")
-lda_diagnose(religious,"Religious")
+lda_diagnose(ethnic,"Ethnic","u_mass")
+lda_diagnose(religious,"Religious", "u_mass")
+if __name__ == '__main__':
+    import multiprocessing
+    multiprocessing.freeze_support()
+    #Apply the commands
+    lda_diagnose(ethnic,"Ethnic","c_v")
+    lda_diagnose(religious,"Religious", "c_v")
